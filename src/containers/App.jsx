@@ -7,7 +7,7 @@ export default class App extends React.Component {
 
     return (
       <Timeline
-        startYear={'2011'}
+        startYear={2011}
         endYear={endYear}/>
     );
   }

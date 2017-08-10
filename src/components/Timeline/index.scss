@@ -1,0 +1,32 @@
+.timeline {
+  width: 50px;
+  height: auto;
+}
+
+.yearBlock {
+  width: 50px;
+  height: 25px;
+  float: left;
+  text-align: center;
+  color: #EBD6D5;
+}
+
+.yearBlock span {
+  position: relative;
+  top: 3.5px;
+  cursor: pointer;
+  font-size: 12pt;
+  transition: font 0.3s;
+}
+
+.yearBlock span:hover {
+  font-size: 13pt;
+}
+
+.keyYear {
+  background-color: #8C0400;
+}
+
+.midYear {
+  background-color: #B30500;
+}
