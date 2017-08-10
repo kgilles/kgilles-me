@@ -1,26 +1,46 @@
 import React from 'react';
 import styles from './index.scss';
+import t from '../../text';
 
 export default class Timeline extends React.Component {
   generateYearBlocks() {
+    let eventTop = 0;
     return this.yearRange().map((year) => {
       if (year === this.props.startYear) {
+        eventTop += 16;
         return (
-          <div key={year} className={`${styles.keyYear} ${styles.yearBlock}`}>
-            <span>{year}</span>
+          <div key={year}>
+            <div className={`${styles.keyYear} ${styles.yearBlock}`}>
+              <span>{year}</span>
+            </div>
+            <div className={styles.eventDescription} style={{ top: `${eventTop}px` }}>
+              {t(`timeline.events.${year}`)}
+            </div>
           </div>
         );
       } else if (year === this.props.endYear) {
+        eventTop += 50;
         return (
-          <div key={year} className={`${styles.keyYear} ${styles.yearBlock}`}>
-            <span>{year}</span>
+          <div key={year}>
+            <div className={`${styles.keyYear} ${styles.yearBlock}`}>
+              <span>{year}</span>
+            </div>
+            <div className={styles.eventDescription} style={{ top: `${eventTop}px` }}>
+              {t(`timeline.events.${year}`)}
+            </div>
           </div>
         );
       }
 
+      eventTop += 50;
       return (
-        <div key={year} className={`${styles.midYear} ${styles.yearBlock}`}>
-          <span>{year}</span>
+        <div key={year}>
+          <div className={`${styles.midYear} ${styles.yearBlock}`}>
+            <span>{year}</span>
+          </div>
+          <div className={styles.eventDescription} style={{ top: `${eventTop}px` }}>
+            {t(`timeline.events.${year}`)}
+          </div>
         </div>
       );
     });

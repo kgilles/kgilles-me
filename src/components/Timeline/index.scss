@@ -5,22 +5,23 @@
 
 .yearBlock {
   width: 50px;
-  height: 25px;
+  height: 50px;
   float: left;
   text-align: center;
   color: #EBD6D5;
+  font-size: 12pt;
+  transition: font 0.3s, background 0.3s;
 }
 
 .yearBlock span {
   position: relative;
-  top: 3.5px;
-  cursor: pointer;
-  font-size: 12pt;
-  transition: font 0.3s;
+  top: 16px;
 }
 
-.yearBlock span:hover {
+.yearBlock:hover {
+  cursor: pointer;
   font-size: 13pt;
+  background-color: #D92E2A;
 }
 
 .keyYear {
@@ -29,4 +30,9 @@
 
 .midYear {
   background-color: #B30500;
+}
+
+.eventDescription {
+  position: absolute;
+  left: 55px;
 }
