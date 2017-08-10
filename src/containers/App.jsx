@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.scss';
 import Timeline from '../components/Timeline';
 
 export default class App extends React.Component {

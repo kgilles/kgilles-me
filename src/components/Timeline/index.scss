@@ -1,26 +1,26 @@
 .timeline {
-  width: 50px;
+  width: 60px;
   height: auto;
 }
 
 .yearBlock {
-  width: 50px;
+  width: 60px;
   height: 50px;
   float: left;
   text-align: center;
   color: #EBD6D5;
-  font-size: 12pt;
+  font-size: 16pt;
   transition: font 0.3s, background 0.3s;
 }
 
 .yearBlock span {
   position: relative;
-  top: 16px;
+  top: 13px;
 }
 
 .yearBlock:hover {
   cursor: pointer;
-  font-size: 13pt;
+  font-size: 16.7pt;
   background-color: #D92E2A;
 }
 
@@ -34,5 +34,6 @@
 
 .eventDescription {
   position: absolute;
-  left: 55px;
+  left: 65px;
+  font-size: 14pt;
 }

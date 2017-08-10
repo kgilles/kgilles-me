@@ -7,7 +7,7 @@ export default class Timeline extends React.Component {
     let eventTop = 0;
     return this.yearRange().map((year) => {
       if (year === this.props.startYear) {
-        eventTop += 16;
+        eventTop += 15;
         return (
           <div key={year}>
             <div className={`${styles.keyYear} ${styles.yearBlock}`}>
