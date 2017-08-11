@@ -1,48 +1,19 @@
 import React from 'react';
+import Event from '../Event';
 import styles from './index.scss';
-import t from '../../text';
 
 export default class Timeline extends React.Component {
-  generateYearBlocks() {
-    let eventTop = 0;
-    return this.yearRange().map((year) => {
-      if (year === this.props.startYear) {
-        eventTop += 15;
-        return (
-          <div key={year}>
-            <div className={`${styles.keyYear} ${styles.yearBlock}`}>
-              <span>{year}</span>
-            </div>
-            <div className={styles.eventDescription} style={{ top: `${eventTop}px` }}>
-              {t(`timeline.events.${year}`)}
-            </div>
-          </div>
-        );
-      } else if (year === this.props.endYear) {
-        eventTop += 50;
-        return (
-          <div key={year}>
-            <div className={`${styles.keyYear} ${styles.yearBlock}`}>
-              <span>{year}</span>
-            </div>
-            <div className={styles.eventDescription} style={{ top: `${eventTop}px` }}>
-              {t(`timeline.events.${year}`)}
-            </div>
-          </div>
-        );
-      }
+  generateYearlyEvents() {
+    let eventPosition = 0;
 
-      eventTop += 50;
-      return (
-        <div key={year}>
-          <div className={`${styles.midYear} ${styles.yearBlock}`}>
-            <span>{year}</span>
-          </div>
-          <div className={styles.eventDescription} style={{ top: `${eventTop}px` }}>
-            {t(`timeline.events.${year}`)}
-          </div>
-        </div>
-      );
+    return this.yearRange().map((year) => {
+      eventPosition += 1;
+      if (year === this.props.startYear) {
+        return (<Event key={year} year={year} keyYear={true} eventPosition={eventPosition} />);
+      } else if (year === this.props.endYear) {
+        return (<Event key={year} year={year} keyYear={true} eventPosition={eventPosition} />);
+      }
+      return (<Event key={year} year={year} eventPosition={eventPosition} />);
     });
   }
 
@@ -54,7 +25,7 @@ export default class Timeline extends React.Component {
   render() {
     return (
       <div id={'timeline'} className={styles.timeline}>
-        {this.generateYearBlocks()}
+        {this.generateYearlyEvents()}
       </div>
     );
   }
