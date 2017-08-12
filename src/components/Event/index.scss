@@ -1,13 +1,12 @@
 .eventContainer {
   width: 500px;
-  height: 50px;
   float: left;
   font-size: 16pt;
   text-align: center;
   transition: background 0.3s;
 }
 
-.eventContainer:hover {
+.eventContainer:hover, .eventContainer.active {
   cursor: pointer;
   background-color: #D92E2A;
 }
@@ -21,11 +20,11 @@
   transition: font 0.3s;
 }
 
-.eventContainer:hover .year {
+.eventContainer:hover .year, .active .year {
   font-size: 16.7pt;
 }
 
-.eventDescription {
+.eventSummary {
   width: 440px;
   height: 50px;
   background-color: #ffffff;
@@ -35,12 +34,35 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  padding: 15px 0 0 5px;
-  transition: font 0.3s;
+  padding: 16px 0 0 5px;
+  transition: font-size 0.3s;
 }
 
-.eventContainer:hover .eventDescription {
-  font-size: 12.1pt;
+.eventContainer:hover .eventSummary, .active .eventSummary {
+  font-size: 12.5pt;
+}
+
+.active .eventSummary {
+  font-weight: 500;
+}
+
+.eventDescription {
+  max-height: 0px;
+  width: 440px;
+  margin-left: 60px;
+  text-align: left;
+  font-size: 12pt;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0 0 5px 5px;
+  background-color: #ffffff;
+  transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+}
+
+.active .eventDescription {
+  max-height: 500px;
+  transition: max-height 1s linear;
 }
 
 .keyYear {

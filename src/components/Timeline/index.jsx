@@ -9,11 +9,11 @@ export default class Timeline extends React.Component {
     return this.yearRange().map((year) => {
       eventPosition += 1;
       if (year === this.props.startYear) {
-        return (<Event key={year} year={year} keyYear={true} eventPosition={eventPosition} />);
+        return (<Event {...this.props} key={year} year={year} keyYear={true} eventPosition={eventPosition} />);
       } else if (year === this.props.endYear) {
-        return (<Event key={year} year={year} keyYear={true} eventPosition={eventPosition} />);
+        return (<Event {...this.props} key={year} year={year} keyYear={true} eventPosition={eventPosition} />);
       }
-      return (<Event key={year} year={year} eventPosition={eventPosition} />);
+      return (<Event {...this.props} key={year} year={year} eventPosition={eventPosition} />);
     });
   }
 
