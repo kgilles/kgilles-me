@@ -10,6 +10,9 @@ export default class App extends React.Component {
       activeEventYears: []
     };
 
+    this.startYear = 2011;
+    this.endYear = 2017;
+
     this.activateEventYear = this.activateEventYear.bind(this);
   }
 
@@ -26,13 +29,11 @@ export default class App extends React.Component {
   }
 
   render() {
-    const endYear = new Date().getFullYear();
-
     return (
       <Timeline
         {...this.state}
-        startYear={2011}
-        endYear={endYear}
+        startYear={this.startYear}
+        endYear={this.endYear}
         activateEventYear={this.activateEventYear}
       />
     );
