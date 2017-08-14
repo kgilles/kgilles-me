@@ -4,13 +4,11 @@ import styles from './index.scss';
 
 export default class Timeline extends React.Component {
   generateYearlyEvents() {
-    return this.yearRange().map((year) => {
-      return (<Event {...this.props} key={year} year={year} />);
-    });
+    return this.yearRange().map(year => <Event {...this.props} key={year} year={year} />);
   }
 
   yearRange() {
-    const numYears = this.props.endYear - this.props.startYear + 1;
+    const numYears = (this.props.endYear - this.props.startYear) + 1;
     return [...Array(numYears).keys()].map(key => key + this.props.startYear);
   }
 

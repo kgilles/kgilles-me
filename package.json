@@ -8,8 +8,8 @@
     "start": "webpack-dev-server --inline --hot --progress --content-base dist --port 7777",
     "test": "./node_modules/.bin/karma start --single-run --PhantomJS",
     "test:watch": "./node_modules/.bin/karma start --PhantomJS",
-    "lint": "./node_modules/.bin/eslint src",
-    "lint:watch": "esw src --watch"
+    "lint": "./node_modules/.bin/eslint src --ext .js --ext .jsx",
+    "lint:watch": "esw src --watch --ext .js --ext .jsx"
   },
   "author": "Kenny Gilles",
   "license": "ISC",

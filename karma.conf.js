@@ -8,10 +8,10 @@ module.exports = function(config) {
     preprocessors: {
       'tests.webpack.js': ['webpack']
     },
+    webpack: webpackConfig,
     webpackMiddleware: {
         noInfo: true
     },
-    webpack: webpackConfig,
     browsers: ['PhantomJS']
   })
 };

@@ -1,4 +1,4 @@
 require('babel-polyfill');
 
-var context = require.context('./src', true, /.+\.spec\.js?$/);
+var context = require.context('./src', true, /.+\.spec\.jsx?$/);
 context.keys().forEach(context);

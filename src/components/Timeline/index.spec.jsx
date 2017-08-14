@@ -15,16 +15,16 @@ function setup(forcedProps = {}) {
   return { enzymeWrapper, props };
 }
 
-describe('Components | Timeline', function() {
-  it('renders the Timeline component', function() {
+describe('Components | Timeline', () => {
+  it('renders the Timeline component', () => {
     const { enzymeWrapper } = setup();
 
     expect(enzymeWrapper.find('#timeline').nodes.length).toBe(1);
   });
 
-  it('renders as many child components as the amount of years', function() {
+  it('renders as many child components as the amount of years', () => {
     const { enzymeWrapper, props } = setup();
-    const numYears = props.endYear - props.startYear + 1;
+    const numYears = (props.endYear - props.startYear) + 1;
 
     expect(enzymeWrapper.find('#timeline').node.props.children.length).toBe(numYears);
   });

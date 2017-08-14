@@ -7,15 +7,19 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'app.bundle.js'
   },
-  preLoaders: [
-    {
-      test: /\.jsx?$/,
-      loader: 'eslint',
-      exclude: /node_modules/
-    }
-  ],
   module: {
-    loaders: [{
+    rules: [{
+      test: /\.jsx?$/,
+      loader: 'eslint-loader',
+      enforce: 'pre',
+      options: {
+        configFile: './.eslintrc',
+        failOnWarning: false,
+        failOnError: true
+      },
+      exclude: /node_modules/
+    },
+    {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
@@ -25,7 +29,7 @@ module.exports = {
       use: [{
         loader: 'style-loader'
       }, {
-        loader: 'css-loader', 
+        loader: 'css-loader',
         query: {
           modules: true
         }
@@ -48,10 +52,5 @@ module.exports = {
     'react/addons': true,
     'react/lib/ExecutionEnvironment': true,
     'react/lib/ReactContext': true
-  },
-  eslint: {
-    configFile: './.eslintrc.json',
-    failOnWarning: false,
-    failOnError: true
   }
 };

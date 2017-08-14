@@ -9,7 +9,7 @@ function setup(forcedProps = {}) {
   const props = Object.assign({}, {
     year: 2011,
     activeEventYears: [],
-    activateEventYear: sinon.spy(),
+    activateEventYear: sinon.spy()
   }, forcedProps);
 
   const enzymeWrapper = shallow(<Event {...props} />);
@@ -17,8 +17,8 @@ function setup(forcedProps = {}) {
   return { enzymeWrapper, props };
 }
 
-describe('Components | Event', function() {
-  it('renders the Event component', function() {
+describe('Components | Event', () => {
+  it('renders the Event component', () => {
     const { enzymeWrapper, props } = setup();
 
     expect(enzymeWrapper.find(`#event-container-${props.year}`).nodes.length).toBe(1);
@@ -27,7 +27,7 @@ describe('Components | Event', function() {
     expect(enzymeWrapper.find(`#event-description-${props.year}`).nodes.length).toBe(1);
   });
 
-  it('renders the texts', function() {
+  it('renders the texts', () => {
     const { enzymeWrapper, props } = setup();
     const year = props.year.toString();
     const summary = t(`timeline.events.${props.year}.summary`);
@@ -38,26 +38,26 @@ describe('Components | Event', function() {
     expect(enzymeWrapper.find(`#event-description-${props.year}`).text()).toBe(description);
   });
 
-  it('appends the active class to active year events', function() {
+  it('appends the active class to active year events', () => {
     const { enzymeWrapper, props } = setup({ activeEventYears: [2011] });
 
     expect(enzymeWrapper.find(`#event-container-${props.year}`).node.props.className).toContain(styles.active);
   });
 
-  it('appends the empty class to year events without descriptions', function() {
+  it('appends the empty class to year events without descriptions', () => {
     const { enzymeWrapper, props } = setup({ year: 2012 });
 
     expect(enzymeWrapper.find(`#event-container-${props.year}`).node.props.className).toContain(styles.empty);
   });
 
-  it('triggers the activateEventYear function onClick', function() {
+  it('triggers the activateEventYear function onClick', () => {
     const { enzymeWrapper, props } = setup();
     enzymeWrapper.find(`#event-container-${props.year}`).simulate('click');
 
     expect(props.activateEventYear.callCount).toBe(1);
   });
 
-  it('doesn\'t trigger the activateEventYear function for empty events', function() {
+  it('doesn\'t trigger the activateEventYear function for empty events', () => {
     const { enzymeWrapper, props } = setup({ year: 2012 });
     enzymeWrapper.find(`#event-container-${props.year}`).simulate('click');
 
