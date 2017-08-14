@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --progress",
-    "start": "webpack-dev-server --inline --hot --progress --content-base dist --port 7777"
+    "start": "webpack-dev-server --inline --hot --progress --content-base dist --port 7777",
+    "test": "./node_modules/.bin/karma start --single-run --PhantomJS",
+    "test:watch": "./node_modules/.bin/karma start --PhantomJS"
   },
   "author": "Kenny Gilles",
   "license": "ISC",
@@ -21,9 +23,18 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
     "html-webpack-plugin": "^2.30.1",
+    "jasmine-core": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-webpack": "^2.0.4",
     "node-sass": "^4.5.3",
+    "react-addons-test-utils": "^15.6.0",
+    "react-test-renderer": "^15.6.1",
     "sass-loader": "^6.0.6",
+    "sinon": "^3.2.0",
     "style-loader": "^0.18.2",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"

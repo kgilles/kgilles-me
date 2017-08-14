@@ -35,5 +35,11 @@ module.exports = {
     template: path.join(__dirname, 'index.ejs'),
     title: 'K Gilles'
     // TODO: favicon
-  })]
+  })],
+  externals: {
+    cheerio: 'window',
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  },
 };

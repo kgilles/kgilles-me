@@ -12,7 +12,6 @@ export default class Timeline extends React.Component {
   }
 
   render() {
-    const eventDescTop = this.props.eventPosition === 1 ? 15 : 15 + 50 * (this.props.eventPosition - 1);
     let yearBlockClasses = `${styles.eventContainer} ${styles.yearBlock}`;
 
     if (this.props.activeEventYears.indexOf(this.props.year) !== -1) yearBlockClasses += ` ${styles.active}`;
@@ -20,15 +19,16 @@ export default class Timeline extends React.Component {
 
     return (
       <div
+        id={`event-container-${this.props.year}`}
         data-year={this.props.year}
         className={yearBlockClasses}
         onClick={() => this.handleClick()}
       >
-        <div className={styles.year}>{this.props.year}</div>
-        <div className={styles.eventSummary}>
+        <div id={`event-year-${this.props.year}`} className={styles.year}>{this.props.year}</div>
+        <div id={`event-summary-${this.props.year}`} className={styles.eventSummary}>
           {t(`timeline.events.${this.props.year}.summary`)}
         </div>
-        <div className={styles.eventDescription}>
+        <div id={`event-description-${this.props.year}`} className={styles.eventDescription}>
           {t(`timeline.events.${this.props.year}.description`)}
         </div>
       </div>
