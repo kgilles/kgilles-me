@@ -1,4 +1,4 @@
-$activeColor: #D92E2A;
+$blockColor: #B30500;
 
 .eventContainer {
   width: 500px;
@@ -10,11 +10,11 @@ $activeColor: #D92E2A;
 
 .eventContainer:not(.empty):hover {
   cursor: pointer;
-  background-color: lighten($activeColor, 5%);
+  background-color: lighten($blockColor, 5%);
 }
 
 .eventContainer.active {
-  background-color: $activeColor;
+  background-color: #8C0400;
 }
 
 .eventContainer.empty {
@@ -75,10 +75,26 @@ $activeColor: #D92E2A;
   transition: max-height 1s linear;
 }
 
-.keyYear {
-  background-color: #8C0400;
+.yearBlock {
+  background-color: $blockColor;
 }
 
-.midYear {
-  background-color: #B30500;
+@media screen and (max-width: 480px) {
+  .eventContainer {
+    width: 100%;
+  }
+
+  .year {
+    width: 15%;
+  }
+
+  .eventSummary {
+    width: 85%;
+    height: 60px;
+  }
+
+  .eventDescription {
+    width: 85%;
+    margin-left: 15%;
+  }
 }

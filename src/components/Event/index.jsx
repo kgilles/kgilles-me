@@ -13,8 +13,7 @@ export default class Timeline extends React.Component {
 
   render() {
     const eventDescTop = this.props.eventPosition === 1 ? 15 : 15 + 50 * (this.props.eventPosition - 1);
-    let yearBlockClasses = styles.eventContainer;
-    yearBlockClasses += this.props.keyYear === true ? ` ${styles.keyYear}` : ` ${styles.midYear}`;
+    let yearBlockClasses = `${styles.eventContainer} ${styles.yearBlock}`;
 
     if (this.props.activeEventYears.indexOf(this.props.year) !== -1) yearBlockClasses += ` ${styles.active}`;
     if (!this.hasDescription()) yearBlockClasses += ` ${styles.empty}`;
