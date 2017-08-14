@@ -19,13 +19,13 @@ describe('Components | Timeline', function() {
   it('renders the Timeline component', function() {
     const { enzymeWrapper } = setup();
 
-    expect(enzymeWrapper.find(`#timeline`).nodes.length).toBe(1);
+    expect(enzymeWrapper.find('#timeline').nodes.length).toBe(1);
   });
 
   it('renders as many child components as the amount of years', function() {
     const { enzymeWrapper, props } = setup();
     const numYears = props.endYear - props.startYear + 1;
 
-    expect(enzymeWrapper.find(`#timeline`).node.props.children.length).toBe(numYears);
+    expect(enzymeWrapper.find('#timeline').node.props.children.length).toBe(numYears);
   });
 });

@@ -3,7 +3,7 @@ const texts = {
     events: {
       2011: {
         summary: 'Joined Klarna AB',
-        description: '...in September as a 2nd Line Global Merchant Support agent.',
+        description: '...in September as a 2nd Line Global Merchant Support agent.'
       },
       2012: {},
       2013: {

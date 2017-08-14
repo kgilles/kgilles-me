@@ -7,6 +7,13 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'app.bundle.js'
   },
+  preLoaders: [
+    {
+      test: /\.jsx?$/,
+      loader: 'eslint',
+      exclude: /node_modules/
+    }
+  ],
   module: {
     loaders: [{
       test: /\.jsx?$/,
@@ -42,4 +49,9 @@ module.exports = {
     'react/lib/ExecutionEnvironment': true,
     'react/lib/ReactContext': true
   },
+  eslint: {
+    configFile: './.eslintrc.json',
+    failOnWarning: false,
+    failOnError: true
+  }
 };

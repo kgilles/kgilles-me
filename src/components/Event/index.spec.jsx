@@ -9,7 +9,7 @@ function setup(forcedProps = {}) {
   const props = Object.assign({}, {
     year: 2011,
     activeEventYears: [],
-    activateEventYear: sinon.spy()
+    activateEventYear: sinon.spy(),
   }, forcedProps);
 
   const enzymeWrapper = shallow(<Event {...props} />);
