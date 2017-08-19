@@ -13,10 +13,10 @@ export default class App extends React.Component {
     this.startYear = 2011;
     this.endYear = 2017;
 
-    this.activateEventYear = this.activateEventYear.bind(this);
+    this.toggleEventYear = this.toggleEventYear.bind(this);
   }
 
-  activateEventYear(year) {
+  toggleEventYear(year) {
     const nextActiveYears = this.state.activeEventYears;
     const yearIndex = nextActiveYears.indexOf(year);
     if (yearIndex === -1) {
@@ -34,7 +34,7 @@ export default class App extends React.Component {
         {...this.state}
         startYear={this.startYear}
         endYear={this.endYear}
-        activateEventYear={this.activateEventYear}
+        toggleEventYear={this.toggleEventYear}
       />
     );
   }

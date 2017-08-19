@@ -9,7 +9,7 @@ function setup(forcedProps = {}) {
   const props = Object.assign({}, {
     year: 2011,
     activeEventYears: [],
-    activateEventYear: sinon.spy()
+    toggleEventYear: sinon.spy()
   }, forcedProps);
 
   const enzymeWrapper = shallow(<Event {...props} />);
@@ -50,17 +50,20 @@ describe('Components | Event', () => {
     expect(enzymeWrapper.find(`#event-container-${props.year}`).node.props.className).toContain(styles.empty);
   });
 
-  it('triggers the activateEventYear function onClick', () => {
+  it('triggers the toggleEventYear function onClick', () => {
     const { enzymeWrapper, props } = setup();
-    enzymeWrapper.find(`#event-container-${props.year}`).simulate('click');
 
-    expect(props.activateEventYear.callCount).toBe(1);
+    enzymeWrapper.find(`#event-year-${props.year}`).simulate('click');
+    expect(props.toggleEventYear.callCount).toBe(1);
+
+    enzymeWrapper.find(`#event-summary-${props.year}`).simulate('click');
+    expect(props.toggleEventYear.callCount).toBe(2);
   });
 
-  it('doesn\'t trigger the activateEventYear function for empty events', () => {
+  it('doesn\'t trigger the toggleEventYear function for empty events', () => {
     const { enzymeWrapper, props } = setup({ year: 2012 });
     enzymeWrapper.find(`#event-container-${props.year}`).simulate('click');
 
-    expect(props.activateEventYear.callCount).toBe(0);
+    expect(props.toggleEventYear.callCount).toBe(0);
   });
 });

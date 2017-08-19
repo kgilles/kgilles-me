@@ -3,29 +3,48 @@ import styles from './index.scss';
 import t from '../../text';
 
 export default class Timeline extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   hasDescription() {
     return t(`timeline.events.${this.props.year}.summary`) !== '';
   }
 
   handleClick() {
-    if (this.hasDescription()) this.props.activateEventYear(this.props.year);
+    if (this.hasDescription()) this.props.toggleEventYear(this.props.year);
+  }
+
+  containerClasses() {
+    let classes = styles.eventContainer;
+
+    if (this.props.activeEventYears.indexOf(this.props.year) !== -1) classes += ` ${styles.active}`;
+    if (!this.hasDescription()) classes += ` ${styles.empty}`;
+
+    return classes;
   }
 
   render() {
-    let yearBlockClasses = `${styles.eventContainer} ${styles.yearBlock}`;
-
-    if (this.props.activeEventYears.indexOf(this.props.year) !== -1) yearBlockClasses += ` ${styles.active}`;
-    if (!this.hasDescription()) yearBlockClasses += ` ${styles.empty}`;
-
     return (
       <div
         id={`event-container-${this.props.year}`}
         data-year={this.props.year}
-        className={yearBlockClasses}
-        onClick={() => this.handleClick()}
+        className={this.containerClasses()}
       >
-        <div id={`event-year-${this.props.year}`} className={styles.year}>{this.props.year}</div>
-        <div id={`event-summary-${this.props.year}`} className={styles.eventSummary}>
+        <div
+          id={`event-year-${this.props.year}`}
+          className={styles.year}
+          onClick={this.handleClick}
+        >
+          {this.props.year}
+        </div>
+        <div
+          id={`event-summary-${this.props.year}`}
+          className={styles.eventSummary}
+          onClick={this.handleClick}
+        >
           {t(`timeline.events.${this.props.year}.summary`)}
         </div>
         <div id={`event-description-${this.props.year}`} className={styles.eventDescription}>

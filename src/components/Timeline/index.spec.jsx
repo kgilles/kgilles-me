@@ -7,7 +7,7 @@ function setup(forcedProps = {}) {
   const props = Object.assign({}, {
     startYear: 2011,
     endYear: 2013,
-    activateEventYear: sinon.spy()
+    toggleEventYear: sinon.spy()
   }, forcedProps);
 
   const enzymeWrapper = shallow(<Timeline {...props} />);
