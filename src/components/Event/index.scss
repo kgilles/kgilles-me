@@ -1,100 +1,121 @@
-$blockColor: #B30500;
+@import '../../scss/mixins';
+
+$container-background: #8C0400;
+$block-background: #B30500;
+$text-color: #EBD6D5;
+
+$primary-font-size: 16pt;
+$secondary-font-size: 12pt;
+$primary-font-size-active: 16.7pt;
+$secondary-font-size-active: 12.5pt;
 
 .eventContainer {
   width: 500px;
+  background-color: $container-background;
   float: left;
-  font-size: 16pt;
+  font-size: $primary-font-size;
   text-align: center;
   transition: background 0.3s;
-}
 
-.eventContainer:not(.empty):hover {
-  cursor: pointer;
-  background-color: lighten($blockColor, 5%);
-}
+  .year {
+    width: 60px;
+    height: 50px;
+    background-color: $block-background;
+    float: left;
+    color: $text-color;
+    padding-top: 13px;
+    transition: font 0.3s;
+    cursor: pointer;
+    @include box-sizing(border-box);
+  }
 
-.eventContainer.active {
-  background-color: #8C0400;
+  .eventSummary {
+    width: 440px;
+    height: 50px;
+    background-color: #FFFFFF;
+    float: right;
+    font-size: $secondary-font-size;
+    text-align: left;
+    padding: 16px 0 0 5px;
+    transition: font-size 0.3s;
+    cursor: pointer;
+    @include box-sizing(border-box);
+  }
+
+  .eventDescription {
+    max-height: 0px;
+    width: 440px;
+    margin-left: 60px;
+    text-align: left;
+    font-size: $secondary-font-size;
+    padding: 0 0 5px 5px;
+    background-color: #FFFFFF;
+    transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+    @include box-sizing(border-box);
+  }
 }
 
 .eventContainer.empty {
-  cursor: default;
+  .year {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .eventSummary {
+    cursor: default;
+  }
 }
 
-.year {
-  width: 60px;
-  float: left;
-  color: #EBD6D5;
-  position: relative;
-  top: 13px;
-  transition: font 0.3s;
+.eventContainer.active {
+  .year {
+    font-size: $primary-font-size-active;
+  }
+
+  .eventSummary {
+    font-size: $secondary-font-size-active;
+    font-weight: 500;
+  }
+
+  .eventDescription {
+    max-height: 500px;
+    transition: max-height 1s linear;
+  }
 }
 
-.eventContainer:not(.empty):hover .year, .active .year {
-  font-size: 16.7pt;
+.eventContainer:not(.empty) {
+  .year {
+    @include box-shadow(inset -5px -7px 2px -2px rgba($container-background, 1));
+  }
 }
 
-.eventSummary {
-  width: 440px;
-  height: 50px;
-  background-color: #FFFFFF;
-  float: right;
-  font-size: 12pt;
-  text-align: left;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  padding: 16px 0 0 5px;
-  transition: font-size 0.3s;
+.eventContainer:not(.empty):hover {
+  .year {
+    background-color: lighten($block-background, 5%);
+    font-size: $primary-font-size-active;
+  }
+
+  .eventSummary {
+    font-size: $secondary-font-size-active;
+  }
 }
 
-.eventContainer:not(.empty):hover .eventSummary, .active .eventSummary {
-  font-size: 12.5pt;
-}
-
-.active .eventSummary {
-  font-weight: 500;
-}
-
-.eventDescription {
-  max-height: 0px;
-  width: 440px;
-  margin-left: 60px;
-  text-align: left;
-  font-size: 12pt;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  padding: 0 0 5px 5px;
-  background-color: #FFFFFF;
-  transition: max-height 1s cubic-bezier(0, 1, 0, 1);
-}
-
-.active .eventDescription {
-  max-height: 500px;
-  transition: max-height 1s linear;
-}
-
-.yearBlock {
-  background-color: $blockColor;
-}
 
 @media screen and (max-width: 480px) {
   .eventContainer {
     width: 100%;
-  }
 
-  .year {
-    width: 15%;
-  }
+    .year {
+      width: 15%;
+    }
 
-  .eventSummary {
-    width: 85%;
-    height: 60px;
-  }
+    .eventSummary {
+      width: 85%;
+      height: 60px;
+    }
 
-  .eventDescription {
-    width: 85%;
-    margin-left: 15%;
+    .eventDescription {
+      width: 85%;
+      margin-left: 15%;
+    }
   }
 }
