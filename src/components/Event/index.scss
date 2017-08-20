@@ -84,7 +84,10 @@ $secondary-font-size-active: 12.5pt;
 
 .eventContainer:not(.empty) {
   .year {
-    @include box-shadow(inset -5px -7px 2px -2px rgba($container-background, 1));
+    @include box-shadow((
+      inset 0 -7px 2px -2px rgba($container-background, 1),
+      inset 0 7px 2px -2px rgba(lighten($container-background, 15%), 1)
+    ));
   }
 }
 
