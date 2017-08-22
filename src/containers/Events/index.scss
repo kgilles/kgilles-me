@@ -1,11 +1,11 @@
-.timeline {
+.events {
   width: 500px;
   height: auto;
   overflow: hidden;
 }
 
 @media screen and (max-width: 400px) {
-  .timeline {
+  .events {
     width: 100%;
   }
 }

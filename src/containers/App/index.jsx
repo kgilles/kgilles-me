@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.scss';
-import Timeline from '../components/Timeline';
+import './index.scss';
+import Events from '../Events';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Timeline
+      <Events
         {...this.state}
         startYear={this.startYear}
         endYear={this.endYear}

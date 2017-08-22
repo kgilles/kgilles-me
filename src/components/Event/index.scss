@@ -102,10 +102,9 @@ $secondary-font-size-active: 12.5pt;
   }
 }
 
-
 @media screen and (max-width: 480px) {
   .eventContainer {
-    width: 100%;
+    width: 85%;
 
     .year {
       width: 15%;
@@ -113,7 +112,6 @@ $secondary-font-size-active: 12.5pt;
 
     .eventSummary {
       width: 85%;
-      height: 60px;
     }
 
     .eventDescription {

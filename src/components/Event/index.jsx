@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './index.scss';
 import t from '../../text';
 
-export default class Timeline extends React.Component {
+export default class Events extends React.Component {
   constructor(props) {
     super(props);
 
@@ -10,7 +10,7 @@ export default class Timeline extends React.Component {
   }
 
   hasDescription() {
-    return t(`timeline.events.${this.props.year}.summary`) !== '';
+    return t(`events.${this.props.year}.summary`) !== '';
   }
 
   handleClick() {
@@ -45,10 +45,10 @@ export default class Timeline extends React.Component {
           className={styles.eventSummary}
           onClick={this.handleClick}
         >
-          {t(`timeline.events.${this.props.year}.summary`)}
+          {t(`events.${this.props.year}.summary`)}
         </div>
         <div id={`event-description-${this.props.year}`} className={styles.eventDescription}>
-          {t(`timeline.events.${this.props.year}.description`)}
+          {t(`events.${this.props.year}.description`)}
         </div>
       </div>
     );

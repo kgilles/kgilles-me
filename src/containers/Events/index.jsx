@@ -1,8 +1,8 @@
 import React from 'react';
-import Event from '../Event';
+import Event from '../../components/Event';
 import styles from './index.scss';
 
-export default class Timeline extends React.Component {
+export default class Events extends React.Component {
   generateYearlyEvents() {
     return this.yearRange().map(year => <Event {...this.props} key={year} year={year} />);
   }
@@ -14,7 +14,7 @@ export default class Timeline extends React.Component {
 
   render() {
     return (
-      <div id={'timeline'} className={styles.timeline}>
+      <div id={'events'} className={styles.events}>
         {this.generateYearlyEvents()}
       </div>
     );

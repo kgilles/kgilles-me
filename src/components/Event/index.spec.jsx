@@ -30,8 +30,8 @@ describe('Components | Event', () => {
   it('renders the texts', () => {
     const { enzymeWrapper, props } = setup();
     const year = props.year.toString();
-    const summary = t(`timeline.events.${props.year}.summary`);
-    const description = t(`timeline.events.${props.year}.description`);
+    const summary = t(`events.${props.year}.summary`);
+    const description = t(`events.${props.year}.description`);
 
     expect(enzymeWrapper.find(`#event-year-${props.year}`).text()).toBe(year);
     expect(enzymeWrapper.find(`#event-summary-${props.year}`).text()).toBe(summary);
