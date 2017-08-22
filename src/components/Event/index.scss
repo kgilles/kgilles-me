@@ -1,13 +1,5 @@
 @import '../../scss/mixins';
-
-$container-background: #8C0400;
-$block-background: #B30500;
-$text-color: #EBD6D5;
-
-$primary-font-size: 16pt;
-$secondary-font-size: 12pt;
-$primary-font-size-active: 16.7pt;
-$secondary-font-size-active: 12.5pt;
+@import '../../scss/_variables';
 
 .eventContainer {
   width: 500px;
@@ -22,7 +14,7 @@ $secondary-font-size-active: 12.5pt;
     height: 50px;
     background-color: $block-background;
     float: left;
-    color: $text-color;
+    color: $font-color;
     padding-top: 13px;
     transition: font 0.3s;
     cursor: pointer;

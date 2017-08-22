@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.scss';
+import Header from '../Header';
 import Events from '../Events';
 
 export default class App extends React.Component {
@@ -30,12 +31,15 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Events
-        {...this.state}
-        startYear={this.startYear}
-        endYear={this.endYear}
-        toggleEventYear={this.toggleEventYear}
-      />
+      <div>
+        <Header />
+        <Events
+          {...this.state}
+          startYear={this.startYear}
+          endYear={this.endYear}
+          toggleEventYear={this.toggleEventYear}
+        />
+      </div>
     );
   }
 }
