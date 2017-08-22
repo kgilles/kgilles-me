@@ -19,26 +19,4 @@ header {
     font-size: $secondary-font-size;
     padding-top: 10px;
   }
-
-  .links {
-    width: 300px;
-    margin: 0 auto;
-    position: relative;
-    top: 35px;
-    left: 25px;
-
-    div {
-      width: 25%;
-      float: left;
-      font-size: $primary-font-size;
-      padding: 6px 5px;
-      cursor: pointer;
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-    }
-
-    div:hover {
-      background-color: $block-background;
-    }
-  }
 }

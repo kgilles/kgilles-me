@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './index.scss';
+import t from '../../text';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -12,16 +13,12 @@ export default class Header extends React.Component {
     return (
       <header>
         <div className={styles.name}>
-          Kenny Gilles
+          {t('header.name')}
         </div>
         <div className={styles.about}>
-          Who am I?
+          {t('header.about')}
         </div>
-        <div className={styles.links}>
-          <div>Link 1</div>
-          <div>Link 2</div>
-          <div>Link 3</div>
-        </div>
+        TODO: Add Links Component
       </header>
     );
   }

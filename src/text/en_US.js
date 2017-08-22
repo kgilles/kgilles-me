@@ -22,6 +22,10 @@ const texts = {
       summary: 'Started contributing on Front End projects',
       description: '...when priorities allowed. Still working mainly as a QA.'
     }
+  },
+  header: {
+    about: 'A Bug Finder and aspiring Front End Developer...',
+    name: 'Kenny Gilles'
   }
 };
 
