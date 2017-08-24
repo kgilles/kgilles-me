@@ -1,3 +1,6 @@
+@import '../../scss/_variables';
+
 body {
+  background-color: $main-background-color;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
