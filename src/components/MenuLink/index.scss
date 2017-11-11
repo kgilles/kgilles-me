@@ -9,4 +9,11 @@
   cursor: pointer;
   padding-top: 10px;
   margin: 0 5px;
+
+  .linkBottom {
+    background: #fff;
+    height: 5px;
+    bottom: 0;
+    position: absolute;
+  }
 }

@@ -9,7 +9,19 @@ export default class Header extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      activeLink: 1
+    };
+
+    this.onMenuLinkClick = this.onMenuLinkClick.bind(this);
+  }
+
+  onMenuLinkClick(e) {
+    const linkId = parseInt(e.target.dataset.linkId, 10) ||
+                   parseInt(e.target.parentElement.dataset.linkId, 10);
+
+    if (this.state.activeLink === linkId) return;
+    this.setState({ activeLink: linkId });
   }
 
   render() {
@@ -24,7 +36,7 @@ export default class Header extends React.Component {
           {t('header.about')}
         </div>
         <div className={styles.wideMenu}>
-          <WideMenu />
+          <WideMenu {...this.state} onClick={this.onMenuLinkClick} />
         </div>
       </header>
     );
