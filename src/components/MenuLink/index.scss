@@ -1,0 +1,12 @@
+@import '../../scss/_variables';
+
+.menuLink {
+  background: $secondary-background-color;
+  width: 100px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-top: 10px;
+  margin: 0 5px;
+}

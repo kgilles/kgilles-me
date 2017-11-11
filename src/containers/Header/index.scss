@@ -5,6 +5,7 @@ header {
   width: 100%;
   height: 200px;
   text-align: center;
+  position: relative;
 
   .map {
     background-repeat: no-repeat;
@@ -27,20 +28,23 @@ header {
   div {
     color: $font-color;
     text-shadow: 1.5px 1.5px #000000;
-    position: absolute;
     margin: 0 auto;
     left: 0;
     right: 0;
   }
 
   .name {
-    top: 15px;
+    padding-top: 15px;
     font-size: $primary-font-size + 8;
   }
 
   .about {
-    top: 55px;
     font-size: $secondary-font-size;
+  }
+
+  .wideMenu {
+    position: absolute;
+    bottom: 0;
   }
 }
 

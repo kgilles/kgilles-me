@@ -1,4 +1,5 @@
 import React from 'react';
+import WideMenu from '../../components/WideMenu';
 import styles from './index.scss';
 import t from '../../text';
 import './NA-map.png';
@@ -22,7 +23,9 @@ export default class Header extends React.Component {
         <div className={styles.about}>
           {t('header.about')}
         </div>
-        TODO: Add Links Component
+        <div className={styles.wideMenu}>
+          <WideMenu />
+        </div>
       </header>
     );
   }
