@@ -1,13 +1,22 @@
 import React from 'react';
 import styles from './index.scss';
 
-const MenuLink = ({ active, children, linkId }) => (
-  <div className={styles.menuLink} data-link-id={linkId}>
-    <div>
-      {children}
-    </div>
-    {active && <div className={styles.linkBottom} />}
-  </div>
-);
+export default class MenuLink extends React.Component {
+  linkClasses() {
+    let classes = styles.menuLink;
+    if (this.props.active) classes = `${classes} ${styles.activeLink}`;
 
-export default MenuLink;
+    return classes;
+  }
+
+  render() {
+    return (
+      <div className={this.linkClasses()} data-link-id={this.props.linkId}>
+        <div>
+          {this.props.children}
+        </div>
+        {this.props.active && <div className={styles.linkBottom} />}
+      </div>
+    );
+  }
+}
