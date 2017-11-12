@@ -25,7 +25,14 @@ const texts = {
   },
   header: {
     about: 'A Bug Finder and aspiring Front End Developer...',
-    name: 'Kenny Gilles'
+    name: 'Kenny Gilles',
+    menu: {
+      links: {
+        link_1: 'About',
+        link_2: 'Resume',
+        link_3: 'Contact'
+      }
+    }
   }
 };
 

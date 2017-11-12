@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuLink from '../MenuLink';
 // import styles from './index.scss';
-// import t from '../../text';
+import t from '../../text';
 
 export default class WideMenu extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ export default class WideMenu extends React.Component {
       };
       if (this.props.activeLink === i) props.active = true;
 
-      const link = (<MenuLink {...props}>Link {i}</MenuLink>);
+      const link = (<MenuLink {...props}>{t(`header.menu.links.link_${i}`)}</MenuLink>);
       links.push(link);
     }
 
