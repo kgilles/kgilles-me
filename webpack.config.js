@@ -10,17 +10,6 @@ module.exports = {
   module: {
     rules: [{
       test: /\.jsx?$/,
-      loader: 'eslint-loader',
-      enforce: 'pre',
-      options: {
-        configFile: './.eslintrc',
-        failOnWarning: false,
-        failOnError: true
-      },
-      exclude: /node_modules/
-    },
-    {
-      test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
     },
