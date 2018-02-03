@@ -30,7 +30,7 @@ export default class WideMenu extends React.Component {
 
   render() {
     return (
-      <div id={'menu-links'} onClick={this.props.onClick}>
+      <div id="menu-links" onClick={this.props.onClick}>
         {this.menuLinks()}
       </div>
     );

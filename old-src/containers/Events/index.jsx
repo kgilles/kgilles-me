@@ -14,7 +14,7 @@ export default class Events extends React.Component {
 
   render() {
     return (
-      <div id={'events'} className={styles.events}>
+      <div id="events" className={styles.events}>
         {this.generateYearlyEvents()}
       </div>
     );
