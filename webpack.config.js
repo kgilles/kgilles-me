@@ -11,7 +11,25 @@ module.exports = {
     rules: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'babel-loader'
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          babelrc: false,
+          plugins: ['transform-object-rest-spread'],
+          presets: [[
+            'env', {
+              targets: {
+                browsers: [
+                  '> 1%',
+                  'Last 2 versions',
+                  'IE 10'
+                ]
+              }
+            }],
+            'react'
+          ]
+        }
+      }]
     },
     {
       test: /\.s?css$/,

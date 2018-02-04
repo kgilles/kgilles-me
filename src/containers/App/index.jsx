@@ -1,15 +1,42 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { updateText } from '../../actions';
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
+  handleOnClick() {
+    this.props.actions.updateText('FOO');
   }
 
   render() {
     return (
       <div>
-        <header>Hello World</header>
+        <button onClick={() => this.handleOnClick()}>{this.props.text}</button>
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    ...state
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {
+      updateText: text => dispatch(updateText(text))
+    }
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
