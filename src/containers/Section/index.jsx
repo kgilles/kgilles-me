@@ -4,24 +4,24 @@ import Skills from './Skills';
 import styles from './index.scss';
 
 const SectionBase = ({ children }) => (
-	<div className={styles.section}>
-		{children}
-	</div>
+  <div className={styles.section}>
+    {children}
+  </div>
 );
 
 const SectionExpertise = () => (
-	<SectionBase>
-		<Expertise />
-	</SectionBase>
+  <SectionBase>
+    <Expertise />
+  </SectionBase>
 );
 
 const SectionSkills = () => (
-	<SectionBase>
-		<Skills />
-	</SectionBase>
+  <SectionBase>
+    <Skills />
+  </SectionBase>
 );
 
 export {
-	SectionExpertise,
-	SectionSkills
+  SectionExpertise,
+  SectionSkills
 };

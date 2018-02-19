@@ -1,0 +1,31 @@
+.expertise {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 28vw) 1fr;
+  grid-template-rows: 1fr 70% 1fr;
+  grid-column-gap: 2%;
+  grid-template-areas: 
+    ". . . . ."
+    ". a b c ."
+    ". . . . .";
+  text-align: center;
+}
+
+.item {
+  border:1px solid black;
+}
+
+.qa {
+  grid-area: a;
+  background-color: red;
+}
+
+.frontend {
+  grid-area: b;
+  background-color: blue;
+}
+
+.devops {
+  grid-area: c;
+  background-color: green;
+}

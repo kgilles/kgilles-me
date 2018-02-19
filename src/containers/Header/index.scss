@@ -1,18 +1,18 @@
 header {
-	height: 100vh;
-	width: 100vw;
-	border-bottom: 1px solid blue;
-	display: grid;
-	grid-template-rows: 1fr 20% 1fr;
-	grid-template-areas: 
-		". . ."
-		". a ."
-		". . .";
+  height: 100vh;
+  width: 100vw;
+  border-bottom: 1px solid blue;
+  display: grid;
+  grid-template-rows: 1fr 20% 1fr;
+  grid-template-areas:
+    ". . ."
+    ". a ."
+    ". . .";
 }
 
 .title {
-	grid-area: a;
-	text-align: center;
-	font-size: 6.5vmin;
-	font-weight: bold;
+  grid-area: a;
+  text-align: center;
+  font-size: 6.5vmin;
+  font-weight: bold;
 }
