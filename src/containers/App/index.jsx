@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Header from '../Header';
 import { SectionExpertise, SectionSkills } from '../Section';
+import Footer from '../Footer';
 import { updateText } from '../../actions';
 import './index.scss';
 
@@ -22,6 +23,7 @@ class App extends React.Component {
         <Header />
         <SectionExpertise />
         <SectionSkills />
+        <Footer />
       </div>
     );
   }
