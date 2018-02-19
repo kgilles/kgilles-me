@@ -46,7 +46,7 @@ module.exports = {
       }]
     },
     {
-      test: /\.png$/,
+      test: /\.jpg$/,
       loader: 'file-loader?name=[name].[ext]'
     }]
   },
