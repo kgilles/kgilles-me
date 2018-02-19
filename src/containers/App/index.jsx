@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Header from '../Header';
+import { SectionExpertise, SectionSkills } from '../Section';
 import { updateText } from '../../actions';
 import './index.scss';
 
@@ -19,7 +20,8 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <button onClick={() => this.handleOnClick()}>{this.props.text}</button>
+        <SectionExpertise />
+        <SectionSkills />
       </div>
     );
   }
