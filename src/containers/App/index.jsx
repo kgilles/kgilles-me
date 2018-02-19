@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Header from '../Header';
 import { updateText } from '../../actions';
+import './index.scss';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +18,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <button onClick={() => this.handleOnClick()}>{this.props.text}</button>
       </div>
     );
