@@ -1,17 +1,12 @@
 import React from 'react';
+import Competence from '../../../components/Competence';
 import styles from './index.scss';
-
-const classes = {
-  devops: `${styles.item} ${styles.devops}`,
-  frontend: `${styles.item} ${styles.frontend}`,
-  qa: `${styles.item} ${styles.qa}`
-};
 
 const SectionExpertise = () => (
   <div className={styles.expertise}>
-    <div className={classes.qa}>QA</div>
-    <div className={classes.frontend}>Front-End</div>
-    <div className={classes.devops}>DevOps</div>
+    <Competence color='red'>QA</Competence>
+    <Competence color='green'>Front-End</Competence>
+    <Competence color='blue'>DevOps</Competence>
   </div>
 );
 

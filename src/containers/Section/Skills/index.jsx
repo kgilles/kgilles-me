@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './index.scss';
 
 const SectionSkills = () => (
-  <div>
+  <div className={styles.skills}>
     skills
   </div>
 );
