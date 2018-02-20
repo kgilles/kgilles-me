@@ -3,7 +3,7 @@ import './index.scss';
 
 const Footer = () => (
   <footer>
-    footer
+    Footer
   </footer>
 );
 

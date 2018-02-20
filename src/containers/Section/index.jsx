@@ -3,28 +3,35 @@ import Expertise from './Expertise';
 import Skills from './Skills';
 import styles from './index.scss';
 
-function resizeSection() {
+function resizeExpertise() {
   const expertiseSection = document.querySelector('#expertise');
   const competenceBlock = expertiseSection.querySelector('div');
-  const blockHeight = competenceBlock.scrollHeight;
+  const blockHeight = competenceBlock.offsetHeight;
 
   expertiseSection.style.height = `${blockHeight}px`;
 }
 
-const SectionBase = ({ children, id }) => (
+function resizeSections() {
+  resizeExpertise();
+}
+
+const SectionBase = ({ children, id, title }) => (
   <div className={styles.section} id={id}>
+    <span className={styles.sectionTitle}>
+      {title}
+    </span>
     {children}
   </div>
 );
 
 const SectionExpertise = () => (
-  <SectionBase id='expertise'>
+  <SectionBase id='expertise' title='Expertise'>
     <Expertise />
   </SectionBase>
 );
 
 const SectionSkills = () => (
-  <SectionBase id='skills'>
+  <SectionBase id='skills' title='Skills'>
     <Skills />
   </SectionBase>
 );
@@ -34,5 +41,5 @@ export {
   SectionSkills
 };
 
-window.addEventListener('load', () => resizeSection());
-window.addEventListener('resize', () => resizeSection());
+window.addEventListener('load', () => resizeSections());
+window.addEventListener('resize', () => resizeSections());

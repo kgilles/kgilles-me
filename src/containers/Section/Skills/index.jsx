@@ -3,7 +3,7 @@ import styles from './index.scss';
 
 const SectionSkills = () => (
   <div className={styles.skills}>
-    skills
+
   </div>
 );
 
