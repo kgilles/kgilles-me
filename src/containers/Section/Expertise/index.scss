@@ -1,15 +1,19 @@
 .expertise {
-  height: 100%;
+  min-height: 100%;
   background: #9eedff;
   display: grid;
-  grid-template-columns: 1fr repeat(3, 28vw) 1fr;
-  grid-template-rows: 1fr 70% 1fr;
-  grid-column-gap: 2%;
+  grid-template-columns: 1fr repeat(3, 22vw) 1fr;
+  grid-template-rows: 1fr 80% 1fr;
+  grid-column-gap: 5%;
   grid-template-areas: 
     ". . . . ."
     ". a b c ."
     ". . . . .";
   text-align: center;
+}
+
+.expertise > * {
+  margin: 15% 0;
 }
 
 .expertise > *:first-child {

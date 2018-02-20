@@ -1,0 +1,21 @@
+@import '../../scss/mixins';
+
+.title {
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.titleBorder {
+  height: 1px;
+  width: 90%;
+  background: #CCC;
+  margin: 3px auto 0 auto;
+  @include blur(1px);
+}
+
+.description {
+  font-size: 120%;
+  text-align: center;
+  padding: 5%;
+}
