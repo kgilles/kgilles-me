@@ -8,7 +8,9 @@ function resizeExpertise() {
   const competenceBlock = expertiseSection.querySelector('div');
   const blockHeight = competenceBlock.offsetHeight;
 
-  expertiseSection.style.height = `${blockHeight}px`;
+  if (expertiseSection.style.height > blockHeight) {
+    expertiseSection.style.height = `${blockHeight}px`;
+  }
 }
 
 function resizeSections() {
