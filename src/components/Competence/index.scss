@@ -1,5 +1,9 @@
 @import '../../scss/mixins';
 
+.block {
+  border-radius: 3px;
+}
+
 .title {
   font-size: 200%;
   font-weight: bold;
