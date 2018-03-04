@@ -7,7 +7,7 @@
 }
 
 .part {
-  padding: 25px 0;
+  padding: 30px 0;
 }
 
 .left {
@@ -29,4 +29,25 @@
 
 .right > *:not(:last-child) {
   margin-bottom: 10px;
+}
+
+@media (max-width: 880px) {
+  .skills {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+
+  .part {
+    padding: 30px 30px 0 0;
+  }
+
+  .part:last-child {
+    padding-bottom: 30px;
+  }
+
+  .left {
+    margin-left: 10%;
+  }
 }
