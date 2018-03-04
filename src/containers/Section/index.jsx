@@ -2,6 +2,7 @@ import React from 'react';
 import Expertise from './Expertise';
 import Skills from './Skills';
 import styles from './index.scss';
+import t from '../../text';
 
 function resizeExpertise() {
   const expertiseSection = document.querySelector('#expertise');
@@ -27,13 +28,13 @@ const SectionBase = ({ children, id, title }) => (
 );
 
 const SectionExpertise = () => (
-  <SectionBase id='expertise' title='Expertise'>
+  <SectionBase id='expertise' title={t('sections.expertise.title')}>
     <Expertise />
   </SectionBase>
 );
 
 const SectionSkills = () => (
-  <SectionBase id='skills' title='Skills'>
+  <SectionBase id='skills' title={t('sections.skills.title')}>
     <Skills />
   </SectionBase>
 );
