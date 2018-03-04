@@ -6,8 +6,8 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack --progress",
     "dev": "webpack-dev-server --inline --hot --progress --content-base dist --port 7777",
-    "test": "./node_modules/.bin/karma start --single-run --ChromeHeadless",
-    "test:watch": "./node_modules/.bin/karma start --ChromeHeadless",
+    "test:unit": "./node_modules/.bin/karma start --single-run --ChromeHeadless",
+    "test:unit:watch": "./node_modules/.bin/karma start --ChromeHeadless",
     "lint": "./node_modules/.bin/eslint src --ext .js --ext .jsx",
     "lint:watch": "esw src --watch --ext .js --ext .jsx --fix"
   },
@@ -30,6 +30,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.9",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
