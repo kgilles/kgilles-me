@@ -1,12 +1,14 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #root {
-  background: url('dala.jpg');
+  background: url('XF28b4k_maybe_finished_no-logo1920x1080.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   --main-font-color: #FFF;
 }
 
@@ -32,7 +34,7 @@ header {
 
 .section {
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .section-title {
@@ -120,8 +122,8 @@ header {
 .competence-description {
   color: #CCC;
   font-size: 120%;
-  text-align: center;
-  padding: 5%;
+  text-align: left;
+  padding: 3% 6%;
 }
 
 .skills {
@@ -129,6 +131,7 @@ header {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-areas: "a b";
+  padding-bottom: 30px;
 }
 
 .part {
@@ -190,6 +193,29 @@ header {
   }
 }
 
-footer {
-  height: 15vh;
+#links {
+  position: fixed;
+  background: #FFF;
+  padding: 5px 5px 1px 5px;
+}
+
+#links a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+@media (min-width: 667.1px) {
+  #links {
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 5px;
+  }
+}
+
+@media (max-width: 667px) {
+  #links {
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 5px;
+  }
 }
