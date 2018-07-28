@@ -38,7 +38,6 @@ header {
 }
 
 .section-title {
-  position: absolute;
   margin: 5px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: bold;
@@ -145,7 +144,7 @@ header {
 }
 
 .left > span {
-  font-size: 200%;
+  font-size: 180%;
   font-weight: bold;
   font-style: italic;
 }
@@ -204,7 +203,7 @@ header {
   text-decoration: none;
 }
 
-@media (min-width: 667.1px) {
+@media (min-width: 668px) {
   #links {
     top: 0;
     right: 0;
