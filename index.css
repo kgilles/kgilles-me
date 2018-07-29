@@ -46,16 +46,17 @@ header {
   margin: 5px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: bold;
-  font-size: 200%;
+  font-size: 120%;
   color: var(--primary-font-color);
 }
 
 .timeline {
-  margin-left: 5%;
+  margin: 0 5%;
+  padding-bottom: 50px;
 }
 
 .timeline-entry {
-  padding: 5px 0;
+  padding-bottom: 10px;
 }
 
 .year {
@@ -169,7 +170,6 @@ header {
   color: var(--secondary-font-color);
   font-size: 180%;
   font-weight: bold;
-  font-style: italic;
 }
 
 .right {
