@@ -1,5 +1,5 @@
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Verdana,Geneva,sans-serif;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -50,6 +50,23 @@ header {
   color: var(--primary-font-color);
 }
 
+.timeline {
+  margin-left: 5%;
+}
+
+.timeline-entry {
+  padding: 5px 0;
+}
+
+.year {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.year::after {
+  content: " — ";
+}
+
 .expertise {
   min-height: 100%;
   display: grid;
@@ -64,7 +81,7 @@ header {
 }
 
 .expertise > * {
-  margin: 15% 0;
+  margin: 5% 0 5% 0;
 }
 
 .expertise > *:first-child {
