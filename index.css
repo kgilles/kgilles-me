@@ -129,6 +129,10 @@ header {
   color: #CCC;
 }
 
+.competence-title.gaming {
+  display: none;
+}
+
 .competence-title-border {
   height: 1px;
   width: 90%;
@@ -146,6 +150,10 @@ header {
   font-size: 120%;
   text-align: left;
   padding: 0 6%;
+}
+
+.competence-description.gaming {
+  display: none;
 }
 
 .skills {
@@ -228,12 +236,69 @@ header {
 #links {
   position: fixed;
   background: #FFF;
-  padding: 5px 5px 1px 5px;
+  padding: 5px 5px 0 5px;
+  height: 40px;
 }
 
 #links a {
   margin: 0 10px;
+  color: black;
   text-decoration: none;
+}
+
+#switch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 45px;
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#switch:active ~ .switch-link {
+  color: dodgerblue;
+}
+
+#switch:checked ~ .switch-link.to-personal {
+  display: none;
+}
+
+#switch:checked ~ .switch-link.to-professional {
+  display: block;
+}
+
+#switch:checked ~ #expertise .competence-title.web-dev {
+  display: none;
+}
+
+#switch:checked ~ #expertise .competence-title.gaming {
+  display: block;
+}
+
+#switch:checked ~ #expertise .competence-description.web-dev {
+  display: none;
+}
+
+#switch:checked ~ #expertise .competence-description.gaming {
+  display: block;
+}
+
+.switch-link {
+  color: blue;
+  position: fixed;
+  width: 120px;
+  padding: 5px 5px 10px 5px;
+  height: 35px;
+  background: #fff;
+  text-align: center;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.switch-link.to-professional {
+  display: none;
 }
 
 @media (min-width: 668px) {
