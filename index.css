@@ -37,6 +37,10 @@ header {
   font-size: 6vmin;
 }
 
+.sub-title.personal {
+  display: none;
+}
+
 .section {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.2);

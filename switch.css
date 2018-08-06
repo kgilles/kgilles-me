@@ -56,6 +56,14 @@
   display: none;
 }
 
+#switch:checked ~ header .sub-title.professional {
+  display: none;
+}
+
+#switch:checked ~ header .sub-title.personal {
+  display: block;
+}
+
 #switch:checked ~ .switch-link.to-personal {
   display: none;
 }
@@ -64,18 +72,18 @@
   display: block;
 }
 
-#switch:checked ~ #expertise .competence-title.web-dev {
+#switch:checked ~ #expertise .competence-title.professional {
   display: none;
 }
 
-#switch:checked ~ #expertise .competence-title.gaming {
+#switch:checked ~ #expertise .competence-title.personal {
   display: block;
 }
 
-#switch:checked ~ #expertise .competence-description.web-dev {
+#switch:checked ~ #expertise .competence-description.professional {
   display: none;
 }
 
-#switch:checked ~ #expertise .competence-description.gaming {
+#switch:checked ~ #expertise .competence-description.personal {
   display: block;
 }

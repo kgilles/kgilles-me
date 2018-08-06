@@ -59,7 +59,7 @@
   color: #CCC;
 }
 
-.competence-title.gaming {
+.competence-title.personal {
   display: none;
 }
 
@@ -82,6 +82,6 @@
   padding: 0 6%;
 }
 
-.competence-description.gaming {
+.competence-description.personal {
   display: none;
 }
