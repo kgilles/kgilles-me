@@ -1,9 +1,8 @@
 #switch {
   position: fixed;
-  top: 0;
-  left: 0;
+  margin-right: 130px;
   width: 130px;
-  height: 52px;
+  height: 45px;
   z-index: 10;
   opacity: 0;
   cursor: pointer;
@@ -14,15 +13,43 @@
 }
 
 .switch-link {
-  color: blue;
   position: fixed;
+  margin-right: 130px;
   width: 120px;
   padding: 5px 5px 10px 5px;
-  height: 35px;
+  height: 30px;
+  font-size: 90%;
   background: #fff;
+  color: blue;
   text-align: center;
   z-index: 5;
   cursor: pointer;
+}
+
+@media (min-width: 668px) {
+  #switch {
+    top: 0;
+    right: 0;
+  }
+
+  .switch-link {
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 5px;
+  }
+}
+
+@media (max-width: 667px) {
+  #switch {
+    bottom: 0;
+    right: 0;
+  }
+
+  .switch-link {
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 5px;
+  }
 }
 
 .switch-link.to-professional {
