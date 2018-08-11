@@ -1,6 +1,6 @@
 body {
   font-family: Verdana,Geneva,sans-serif;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(26, 26, 26);
 }
 
 #root {
@@ -9,8 +9,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  --primary-font-color: #FFF;
-  --secondary-font-color: #AAA;
+  --primary-font-color: rgb(255, 255, 255);
+  --secondary-font-color: rgb(26, 26, 26);
 }
 
 header {
@@ -34,7 +34,7 @@ header {
 }
 
 .sub-title {
-  font-size: 6vmin;
+  font-size: 5.5vmin;
 }
 
 .sub-title.personal {
@@ -43,7 +43,7 @@ header {
 
 .section {
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .section-title {
@@ -54,9 +54,20 @@ header {
   color: var(--primary-font-color);
 }
 
-.timeline {
+.about {
   margin: 0 5%;
   padding-bottom: 50px;
+}
+
+.about.personal {
+  display: none;
+  text-align: center;
+}
+
+.about.personal div {
+  font-size: 130%;
+  width: 60%;
+  margin: auto;
 }
 
 .timeline-entry {
@@ -93,6 +104,15 @@ header {
 }
 
 @media (max-width: 667px) {
+  .sub-title {
+    font-size: 5.3vmin;
+  }
+
+  .about.personal div {
+    width: 100%;
+    text-align: left;
+  }
+
   #links {
     bottom: 0;
     right: 0;

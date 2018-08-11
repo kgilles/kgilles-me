@@ -72,6 +72,14 @@
   display: block;
 }
 
+#switch:checked ~ #about .about.professional {
+  display: none;
+}
+
+#switch:checked ~ #about .about.personal {
+  display: block;
+}
+
 #switch:checked ~ #expertise .competence-title.professional {
   display: none;
 }
@@ -81,9 +89,13 @@
 }
 
 #switch:checked ~ #expertise .competence-description.professional {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  max-height: 0;
 }
 
 #switch:checked ~ #expertise .competence-description.personal {
-  display: block;
+  visibility: visible;
+  position: static;
+  max-height: 1000px;
 }

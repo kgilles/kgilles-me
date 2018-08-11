@@ -80,8 +80,13 @@
   font-size: 120%;
   text-align: left;
   padding: 0 6%;
+  max-height: 1000px;
+  transition: max-height 1s;
+  transition-delay: max-height 200ms;
 }
 
 .competence-description.personal {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  max-height: 0;
 }
