@@ -63,11 +63,11 @@
 }
 
 #switch:checked ~ header .sub-title.professional {
-  display: none;
+  margin-right: -250%;
 }
 
 #switch:checked ~ header .sub-title.personal {
-  display: block;
+  margin-left: 0;
 }
 
 #switch:checked ~ .switch-link.to-personal {

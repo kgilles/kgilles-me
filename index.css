@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: grid;
   grid-template-rows: 1fr 20% 1fr;
@@ -34,11 +34,14 @@ header {
 }
 
 .sub-title {
-  font-size: 5.5vmin;
+  font-size: 5.3vmin;
+  padding: 0 5px;
+  transition: margin-left 1s ease-in-out, margin-right 1s ease-in-out;
 }
 
 .sub-title.personal {
-  display: none;
+  margin-top: -7vmin;
+  margin-left: -200%;
 }
 
 .section {
@@ -57,6 +60,7 @@ header {
 .about {
   margin: 0 5%;
   padding-bottom: 50px;
+  width: 100%;
 }
 
 .about.personal {
