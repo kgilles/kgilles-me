@@ -1,0 +1,17 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .title {
+    color: rgb(255, 255, 255);
+  }
+
+  .section-title {
+    color: rgb(26, 26, 26);
+  }
+
+  .left > span {
+    color: rgb(26, 26, 26);
+  }
+
+  .skill-description {
+    color: rgb(26, 26, 26);
+  }
+}

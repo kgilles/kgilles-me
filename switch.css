@@ -1,5 +1,6 @@
 #switch {
   position: fixed;
+  margin-top: 3px;
   margin-right: 130px;
   width: 130px;
   height: 45px;
@@ -8,22 +9,27 @@
   cursor: pointer;
 }
 
-#switch:active ~ .switch-link {
-  color: dodgerblue;
+#switch:active ~ .switch-button {
+  color: #293424;
 }
 
-.switch-link {
+#switch:hover ~ .switch-button {
+  background: #a7c35b;
+}
+
+.switch-button {
   position: fixed;
   margin-right: 130px;
   width: 120px;
-  padding: 5px 5px 10px 5px;
+  padding: 13px 5px 2px 5px;
   height: 30px;
   font-size: 90%;
-  background: #fff;
-  color: blue;
+  background: #accd7e;
+  color: #000;
   text-align: center;
   z-index: 5;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 @media (min-width: 668px) {
@@ -32,13 +38,10 @@
     right: 0;
   }
 
-  .switch-link {
+  .switch-button {
+    margin-top: 3px;
     top: 0;
     right: 0;
-    border-bottom-left-radius: 5px;
-    -webkit-box-shadow: 0 4px 5px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 4px 5px 0px rgba(0,0,0,0.2);
-    box-shadow: 0 4px 5px 0px rgba(0,0,0,0.2);
   }
 }
 
@@ -48,33 +51,38 @@
     right: 0;
   }
 
-  .switch-link {
+  .switch-button {
+    margin-bottom: 3px;
     bottom: 0;
     right: 0;
-    border-top-left-radius: 5px;
-    -webkit-box-shadow: 0 -4px 5px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 -4px 5px 0px rgba(0,0,0,0.2);
-    box-shadow: 0 -4px 5px 0px rgba(0,0,0,0.2);
   }
 }
 
-.switch-link.to-professional {
+.switch-button.to-professional {
   display: none;
 }
 
 #switch:checked ~ header .sub-title.professional {
-  margin-right: -250%;
+  margin-right: -500%;
 }
 
 #switch:checked ~ header .sub-title.personal {
   margin-left: 0;
 }
 
-#switch:checked ~ .switch-link.to-personal {
+#switch:checked ~ .section .section-title.professional {
   display: none;
 }
 
-#switch:checked ~ .switch-link.to-professional {
+#switch:checked ~ .section .section-title.personal {
+  display: block;
+}
+
+#switch:checked ~ .switch-button.to-personal {
+  display: none;
+}
+
+#switch:checked ~ .switch-button.to-professional {
   display: block;
 }
 
@@ -95,13 +103,9 @@
 }
 
 #switch:checked ~ #expertise .competence-description.professional {
-  visibility: hidden;
-  position: absolute;
-  max-height: 0;
+  display: none;
 }
 
 #switch:checked ~ #expertise .competence-description.personal {
-  visibility: visible;
-  position: static;
-  max-height: 1000px;
+  display: block;
 }

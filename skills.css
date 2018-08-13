@@ -1,3 +1,7 @@
+#skills {
+  display: none;
+}
+
 .skills {
   min-height: 100%;
   display: grid;

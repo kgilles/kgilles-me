@@ -9,18 +9,19 @@
     <link rel="stylesheet" type="text/css" href="expertise.css">
     <link rel="stylesheet" type="text/css" href="skills.css">
     <link rel="stylesheet" type="text/css" href="switch.css">
+    <link rel="stylesheet" type="text/css" href="ie.css" />
   </head>
   <body>
     <div id="root">
       <input id="switch" type="checkbox" />
-      <a class="switch-link to-personal" href="#">Switch to Personal</a>
-      <a class="switch-link to-professional" href="#">Switch to Professional</a>
+      <span class="switch-button to-personal">About Me</span>
+      <span class="switch-button to-professional">About My Work</span>
 
       <header>
         <div class="title">
           My name is Kenny
           <div class="sub-title professional">
-            I am the developer <u>and</u> the user
+            I am the developer <i>and</i> the user
           </div>
           <div class="sub-title personal">
             A Swede in America
@@ -29,58 +30,58 @@
       </header>
 
       <div class="section" id="about">
-        <span class="section-title">About</span>
+        <span class="section-title professional">What Happened to Me?</span>
+        <span class="section-title personal">Who am I?</span>
         <div class="about professional">
           <div class="timeline-entry">
             <span class="year">2011</span>
             <span class="happening">
-              Hired at Klarna in Stockholm, Sweden as a global Merchant Support 2nd Line agent
+              Hired at Klarna in Sweden as a global <b>Merchant Support 2nd Line agent</b>
             </span>
           </div>
           <div class="timeline-entry">
             <span class="year">2013</span>
             <span class="happening">
-              Promoted to QA Engineer for the flagship product Klarna Checkout
+              Became a <b>QA Engineer</b> for the flagship product Klarna Checkout
             </span>
           </div>
           <div class="timeline-entry">
             <span class="year">2015</span>
             <span class="happening">
-              Sent on a temporary assignment to Columbus, Ohio to help startup Klarna Engineering in the USA
+              Sent on an assignment to Columbus, Ohio to help start up Klarna Engineering in the USA
             </span>
           </div>
           <div class="timeline-entry">
             <span class="year">2016</span>
             <span class="happening">
-              The assignment was changed to a permanent one after I requested to sign with Klarna US
+              Signed with Klarna US
             </span>
           </div>
           <div class="timeline-entry">
             <span class="year">2017</span>
             <span class="happening">
-              Moved from being a QA for Klarna Checkout to being a developer for Klarna's address collection module
+              Became a <b>web developer</b> for Klarna's address collection module
             </span>
           </div>
         </div>
         <div class="about personal">
-          <div>
-            <p>
-              I love ice hockey, my light bulbs are smart, I'm trying to grow my own food, I play a lot of video games, and recently I somehow got into hiking.
-            </p>
-            <p>
-              I created this website(and my upcoming showcase project) to get more and different experiences outside of my daily work. Something as "simple" as creating a page like this using only HTML and CSS is a fun challenge every once in a while. I see it as a sandbox.
-            </p>
+          <div class="p">
+              I love ice hockey, my light bulbs are smart, I try to grow my own food, I play a lot of video games, and recently I somehow got into hiking.
+          </div>
+          <div class="p">
+            Since I started playing around with software and web development in my early teens I've been "learning by doing". I quickly pick up and learn new topics and in a short amount of time I'm able to contribute on a high level.
           </div>
         </div>
       </div>
 
       <div class="section" id="expertise">
-        <span class="section-title">Expertise</span>
+        <span class="section-title professional">What I Do Best</span>
+        <span class="section-title personal">What I Do</span>
         <div class="expertise">
           <!-- Block 1 -->
           <div class="competence-block" style="background: rgb(33, 33, 33);">
             <div class="competence-title professional">Web Development</div>
-            <div class="competence-title personal">Video Games</div>
+            <div class="competence-title personal">Ice Hockey</div>
             <div class="competence-title-border"></div>
             <div class="competence-description professional">
               <p>
@@ -92,7 +93,7 @@
             </div>
             <div class="competence-description personal">
               <p>
-                Should I even have these blocks here when in "personal" mode?
+                I stop pucks because no one else wants to.
               </p>
             </div>
           </div>
@@ -100,37 +101,14 @@
           <!-- Block 2 -->
           <div class="competence-block" style="background: rgb(55, 55, 55);">
             <div class="competence-title professional">Testing/QA</div>
-            <div class="competence-title personal">Ice Hockey</div>
+            <div class="competence-title personal">Smart Home Tinkering</div>
             <div class="competence-title-border"></div>
             <div class="competence-description professional">
               <p>
-                During my years as a QA I have done a little bit of everything that the title stands for. From the analytical part of understanding data and business requirements to write up test plans, cases and processes, to the testing side of it where I have performed both manual and automated testing for web on a multitude of desktop and mobile devices.
+                During my years as a QA I have done a little bit of everything that the title stands for. From the analytical part of understanding data and business requirements to writing up test plans, cases and processes, to the testing side of it where I have performed both manual and automated testing for web on a multitude of desktop and mobile devices.
               </p>
               <p>
-                Developing automation frameworks and tests has been on my plate during my time as well, touching multiple programming languages.
-              </p>
-              <p>
-                I have also been responsible for setting up and maintaining web tools and testing environments used by my team and our stakeholders to demo and test our products.
-              </p>
-            </div>
-            <div class="competence-description personal">
-              <p>
-                I stop pucks because no one else wants to.
-              </p>
-            </div>
-          </div>
-
-          <!-- Block 3 -->
-          <div class="competence-block" style="background: rgb(77, 77, 77);">
-            <div class="competence-title professional">E-Commerce</div>
-            <div class="competence-title personal">Cooking & Gardening</div>
-            <div class="competence-title-border"></div>
-            <div class="competence-description professional">
-              <p>
-                I started working in the e-commerce business in 2011 as a technical support agent for merchants and their e-commerce platforms. Helping them troubleshoot plugin integrations and very often having to dive into the platform code. I also worked a lot with the post-purchase order and customer handling.
-              </p>
-              <p>
-                Later on I started as a QA for Klarna's full fledged checkout product focusing on conversion, data collection and payments. Nowadays I'm working strictly with pre-purchase address and data collection.
+                Developing and maintaining automation frameworks and tests has been on my plate during my time as well, touching multiple programming languages.
               </p>
             </div>
             <div class="competence-description personal">
@@ -139,89 +117,24 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="section" id="skills">
-        <span class="section-title">Skills</span>
-        <div class="skills">
-          <div class="part left">
-            <span>
-              Since I started playing around with software and web development in my early teens I've been "learning by doing". I quickly pick up and learn new topics and in a short amount of time I'm able to contribute on a high level.
-            </span>
-          </div>
-          <div class="part right">
-            <div>
-              <div class="skill-title">JavaScript / ES6</div>
-              <div class="skill-description">
-                THE programming language when it comes to web development.
-              </div>
+          <!-- Block 3 -->
+          <div class="competence-block" style="background: rgb(77, 77, 77);">
+            <div class="competence-title professional">E-Commerce</div>
+            <div class="competence-title personal">Gardening</div>
+            <div class="competence-title-border"></div>
+            <div class="competence-description professional">
+              <p>
+                I started working in the e-commerce business in 2011 as a technical support agent for merchants and their e-commerce platforms. Helping them troubleshoot plugin integrations and very often having to dive into the platform code. I also worked a lot with the post-purchase order and customer handling.
+              </p>
+              <p>
+                Later on I started as a QA for Klarna's full fledged checkout product focusing on conversion, data collection and payments. Nowadays I'm working with pre-purchase address and data collection.
+              </p>
             </div>
-            <div>
-              <div class="skill-title">React</div>
-              <div class="skill-description">
-                A JavaScript library for building user interfaces.
-              </div>
-            </div>
-            <div>
-              <div class="skill-title">Redux</div>
-              <div class="skill-description">
-                A predictable state container(manager) for JavaScript apps. I use Redux with React in my daily work.
-              </div>
-            </div>
-            <div>
-              <div class="skill-title">Enzyme, Jasmine, Sinon and Chai</div>
-              <div class="skill-description">
-                Used for unit testing JavaScript applications.
-              </div>
-            </div>
-            <div>
-              <div class="skill-title">Webpack</div>
-              <div class="skill-description">
-                Bundles JavaScript files for usage in a browser.
-              </div>
-            </div>
-            <div>
-              <div class="skill-title">Babel</div>
-              <div class="skill-description">
-                Converts ES2015+ code into a backwards compatible version of JavaScript in old browsers or environments.
-              </div>
-            </div>
-            <div>
-              <div class="skill-title">Selenium Server & WebDriver</div>
-              <div class="skill-description">
-                The most common tool for browser automation.
-              </div>
-            </div>
-            <div>
-              <div class="skill-title">Jenkins</div>
-              <div class="skill-description">
-                The leading open source automation server. Jenkins supports building, deploying and automating any project.
-              </div>
-            </div>
-            <div>
-              <div class="skill-title">Sentry</div>
-              <div class="skill-description">
-                Error tracking tool that helps developers monitor and fix exceptions in real time.
-              </div>
-            </div>
-            <div>
-              <div class="skill-title">TestCafe</div>
-              <div class="skill-description">
-                A Node.js tool to automate end-to-end web testing.
-              </div>
-            </div>
-            <div>
-              <div class="skill-title">Docker</div>
-              <div class="skill-description">
-                A tool designed to make it easier to create, deploy, and run applications by using containers.
-              </div>
-            </div>
-            <div>
-              <div class="skill-title">JIRA</div>
-              <div class="skill-description">
-                A tool used by teams to plan, track, and release software.
-              </div>
+            <div class="competence-description personal">
+              <p>
+                TODO
+              </p>
             </div>
           </div>
         </div>

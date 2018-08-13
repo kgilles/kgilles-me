@@ -9,6 +9,7 @@
     ". a b c ."
     ". . . . .";
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .expertise > * {
@@ -52,7 +53,6 @@
 }
 
 .competence-title {
-  font-size: 200%;
   font-weight: bold;
   text-align: center;
   padding-top: 3%;
@@ -80,13 +80,20 @@
   font-size: 120%;
   text-align: left;
   padding: 0 6%;
-  max-height: 1000px;
-  transition: max-height 1s;
-  transition-delay: max-height 200ms;
 }
 
 .competence-description.personal {
-  visibility: hidden;
-  position: absolute;
-  max-height: 0;
+  display: none;
+}
+
+@media (min-width: 668px) {
+  .competence-title {
+    font-size: 180%;
+  }
+}
+
+@media (max-width: 667px) {
+  .competence-title {
+    font-size: 150%;
+  }
 }
