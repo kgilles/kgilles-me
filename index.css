@@ -153,9 +153,24 @@ header {
     font-size: 5.3vmin;
   }
 
+  .year {
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid black;
+  }
+
+  .year:after {
+    content: "";
+  }
+
   .about.personal div {
     width: 100%;
     text-align: left;
+  }
+
+  .about.personal .p {
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   #links {
