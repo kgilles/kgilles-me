@@ -1,7 +1,7 @@
 #switch {
   position: fixed;
   margin-top: 3px;
-  margin-right: 130px;
+  margin-right: 110px;
   width: 130px;
   height: 45px;
   z-index: 10;
@@ -19,7 +19,7 @@
 
 .switch-button {
   position: fixed;
-  margin-right: 130px;
+  margin-right: 110px;
   width: 120px;
   padding: 13px 5px 2px 5px;
   height: 30px;
