@@ -12,6 +12,7 @@ header {
   height: 90vh;
   width: 100vw;
   display: grid;
+  grid-template-columns: 0 100% 0;
   grid-template-rows: 1fr 25% 1fr;
   grid-template-areas:
     ". . ."
