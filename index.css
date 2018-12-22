@@ -1,6 +1,7 @@
 body {
   font-family: Verdana,Geneva,sans-serif;
   color: rgb(26, 26, 26);
+  overflow-x: hidden;
 }
 
 #root {
