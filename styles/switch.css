@@ -19,7 +19,7 @@
 
 .switch-button {
   position: fixed;
-  margin-right: 110px;
+  margin-right: 111px;
   width: 120px;
   padding: 13px 5px 2px 5px;
   height: 30px;
@@ -53,7 +53,6 @@
 
   .switch-button {
     margin-bottom: 3px;
-    margin-right: 109px;
     bottom: 0;
     right: 0;
   }
