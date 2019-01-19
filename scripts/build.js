@@ -2,6 +2,7 @@ console.log('=== Building started ===');
 
 const fs = require('fs');
 const path = require('path');
+const minifyCSS = require('./minifyCSS.js');
 
 const baseDir = process.cwd();
 const buildDir = path.join(baseDir, 'build');
@@ -29,26 +30,7 @@ console.log("\n=== Trimming and bundling style files ===");
 
 const stylesDir = path.join(baseDir, 'styles');
 const buildStylesFile = path.join(buildDir, 'bundle.css');
-
-let stylesContents = '';
-
-fs.readdirSync(stylesDir).forEach((file, i, arr) => {
-  console.log(`Bundling file ${i+1}/${arr.length} (${file})`);
-
-  const styleFile = path.join(stylesDir, file);
-  stylesContents = stylesContents + fs.readFileSync(styleFile, 'utf8');
-});
-
-let trimmedStyles = stylesContents.replace(/\n/g, '');
-const imagesPaths = trimmedStyles.match(/'.*?\.jpg'/g);
-
-imagesPaths.forEach((imagePath) => {
-  const purePath = imagePath.replace(/'/g, '');
-  const newPath = `images/${purePath.replace('../', '')}`;
-  console.log(`Replacing image path ${purePath} with ${newPath}`);
-
-  trimmedStyles = trimmedStyles.replace(purePath, newPath);
-});
+const trimmedStyles = minifyCSS(stylesDir);
 
 fs.writeFileSync(buildStylesFile, trimmedStyles);
 
