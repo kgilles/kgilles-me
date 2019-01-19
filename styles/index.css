@@ -121,7 +121,7 @@ header {
 
 @media (min-width: 668px) {
   body {
-    background: url('../canoe-opti.jpg'), url('../canoe-blur-opti.jpg');
+    background: url('../canoe-opti.jpg');
     background-color: #accd7e;
     background-size: cover;
     background-repeat: no-repeat;
