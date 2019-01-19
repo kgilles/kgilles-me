@@ -73,14 +73,27 @@ header {
   display: none;
 }
 
+#about-wrapper {
+  position: relative;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
 .about {
   margin: 0 5%;
-  padding: 20px 0;
+  padding-bottom: 20px;
   font-size: 130%;
+  transition: opacity 500ms;
+}
+
+.about.professional {
+  opacity: 1;
 }
 
 .about.personal {
-  display: none;
+  position: absolute;
+  top: 0;
+  opacity: 0;
 }
 
 .about.personal .p {

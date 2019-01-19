@@ -24,12 +24,8 @@
     margin: 20px 3vw 0 3vw;
   }
 
-  .competence-block > .competence-description.professional {
+  .competence-block > .competence-description {
     height: 565px;
-  }
-
-  .competence-block > .competence-description.personal {
-    height: 400px;
   }
 
   .skill-description {

@@ -11,7 +11,7 @@
 }
 
 .expertise > * {
-  margin: 20px 0 5% 0;
+  margin: 20px 0 6% 0;
 }
 
 .expertise > *:first-child {
@@ -47,6 +47,7 @@
 }
 
 .competence-block {
+  position: relative;
   border-radius: 3px;
 }
 
@@ -78,10 +79,18 @@
   font-size: 120%;
   text-align: left;
   padding: 0 6%;
+  transition: opacity 500ms;
+}
+
+.competence-description.professional {
+  opacity: 1;
 }
 
 .competence-description.personal {
-  display: none;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  padding-top: 60px;
 }
 
 @media (min-width: 668px) {

@@ -17,7 +17,7 @@ function filesToString(stylesDir) {
 function trimStyles(stylesContents) {
   let trimmed = stylesContents.replace(/\n/g, ''); // Put everything on a single line
   trimmed = trimmed.replace(/\/\*.*?\*\//g, ''); // Remove all block comments
-  trimmed = trimmed.replace(/[\s|\t]*([{|:|;|}])[\s|\t]*/g, (_, char) => char); // Remove spaces around {};:
+  trimmed = trimmed.replace(/[\s|\t]*([{|:|;|}|,])[\s|\t]*/g, (_, char) => char); // Remove spaces around {};:,
 
   return trimmed;
 }
