@@ -109,7 +109,7 @@
   position: absolute;
   top: 0;
   opacity: 0;
-  padding-top: 60px;
+  /* padding-top: 60px; TODO: Figure out a way to remove padding after transition is complete */
 }
 
 #switch:checked ~ #expertise .competence-description.personal {
